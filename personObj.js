@@ -28,16 +28,22 @@ let PersonaNico = function(name, lastName, date){
 }
 
 class Persona {
-  constructor(name, lastName, date) {
+  constructor(name, lastName, date, activitys) {
     this.nombre = name;
     this.apellido = lastName;
     this.fecha = date;
-    this.calcularEdad = function(){
-      let fechaCalculada = 2022 - this.fecha;
-      return fechaCalculada;
-    }
-    this.mostrarDatos = function(){
-      console.log(`nombre: ${this.nombre} apellido: ${this.apellido} y tu edad es: ${this.calcularEdad()}`);
-    }
+    this.actividades = activitys;
+  }
+
+  calcularEdad = function(){
+    let fechaCalculada = 2022 - this.fecha;
+    return fechaCalculada;
+  }
+
+  mostrarDatos = function(){
+    console.log(`nombre: ${this.nombre} apellido: ${this.apellido} y tu edad es: ${this.calcularEdad()}`);
   }
 }
+
+let persona1 = new Persona('Pedro', 'Alfaro', 1845, ['futbol', 'peliculas', 'aire libre']);
+persona1.mostrarDatos();
