@@ -47,3 +47,21 @@ class Persona {
 
 let persona1 = new Persona('Pedro', 'Alfaro', 1845, ['futbol', 'peliculas', 'aire libre']);
 persona1.mostrarDatos();
+
+const persona1JSON = JSON.stringify(persona1);
+console.log(persona1JSON);
+
+const personaConvert = JSON.parse(persona1JSON);
+console.log(personaConvert);
+
+// class Cuenta {
+//   constructor(saldo){
+//     this.saldo = saldo;
+//   }
+
+//   realizarDeposito(monto){
+//     this.saldo = this.saldo + monto;
+//     console.log(this.saldo);
+//   }
+// }
+
